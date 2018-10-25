@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
+body,html{
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #a8a8a8, #7f7f7f, #585858, #353535, #141414);
+    font-family: 'Niramit', sans-serif;
+}
+
+.thumbnail-border{
+    padding: 1rem;
+}
+
+.button{
+    border-radius: 8px;   
+}
+
+.font,.far{
+    padding-bottom: 1rem;
+}
+
+.dorado{
+    background-color: #ffbf00;
+}
+
+a.button.dorado:hover{
+    background-color: #e6b219;
+}
+
+.azul{
+    background-color: #256d7b;
+}
+
+a.button.azul:hover{
+    background-color: #1e5762;
+}
+
+.marron{
+    background-color: #4e3b31;
+}
+
+a.button.marron:hover{
+    background-color: #4b3c34;
+}
+
+.naranja{
+    background-color: #ed8526;
+}
+
+a.button.naranja:hover{
+    background-color: #c9874a;
+}
+
+h1{
+    background-color: #000000;
+    color: #ffffff;
+}
