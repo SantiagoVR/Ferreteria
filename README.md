@@ -147,5 +147,5 @@ Para agregar un cliente se tiene que introducir
 
 Del mismo modo la opción de modificar es para estos datos, la única información que no se podrá modificar es el número de cliente.
 
-#Video
+# Video
 Demostración de uso y configuración del proyecto https://www.youtube.com/watch?v=FYxePoyI5Gk 
