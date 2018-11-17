@@ -1,0 +1,69 @@
+CREATE DATABASE `ferreteria`
+
+use `ferreteria`
+
+CREATE TABLE `clientes` (
+  `codigo` int(4) NOT NULL,
+  `cliente` varchar(30) COLLATE latin1_spanish_ci NOT NULL,
+  `deuda` int(11) NOT NULL,
+  `pagoclientescodigo` int(11) NOT NULL,
+  `descripcion` text COLLATE latin1_spanish_ci NOT NULL,
+  `fechaPago` date NOT NULL,
+  `pago` varchar(15) COLLATE latin1_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+CREATE TABLE `pedidos` (
+  `numeroPedido` int(4) NOT NULL,
+  `descripcionPedido` text COLLATE latin1_spanish_ci NOT NULL,
+  `fechaLlegada` date NOT NULL,
+  `entrega` varchar(30) COLLATE latin1_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+CREATE TABLE `productos` (
+  `codigo` int(4) NOT NULL,
+  `nombre` varchar(30) COLLATE latin1_spanish_ci NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `precio` int(11) NOT NULL,
+  `descripcionProducto` text COLLATE latin1_spanish_ci NOT NULL,
+  `categoria` varchar(40) COLLATE latin1_spanish_ci NOT NULL,
+  `ubicacion` char(20) COLLATE latin1_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+CREATE TABLE `viajes` (
+  `codigo` int(4) NOT NULL,
+  `nombreCliente` varchar(30) COLLATE latin1_spanish_ci NOT NULL,
+  `fechaEntrega` datetime DEFAULT NULL,
+  `materiales` text COLLATE latin1_spanish_ci NOT NULL,
+  `descripcion` text COLLATE latin1_spanish_ci NOT NULL,
+  `dinero` int(11) NOT NULL,
+  `entrega` varchar(15) COLLATE latin1_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`codigo`);
+
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`numeroPedido`);
+
+
+ALTER TABLE `productos`
+  ADD PRIMARY KEY (`codigo`);
+
+ALTER TABLE `viajes`
+  ADD PRIMARY KEY (`codigo`);
+
+
+ALTER TABLE `clientes`
+  MODIFY `codigo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+
+ALTER TABLE `pedidos`
+  MODIFY `numeroPedido` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE `productos`
+  MODIFY `codigo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+
+ALTER TABLE `viajes`
+  MODIFY `codigo` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
